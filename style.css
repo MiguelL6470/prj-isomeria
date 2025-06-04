@@ -1,0 +1,213 @@
+body {
+    
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 20px;
+}
+
+body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari e Edge */
+}
+.container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 500px;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+label {
+    font-weight: bold;
+}
+
+#resultado {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.warning {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.alert {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.atom {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    margin: 30px auto;
+}
+
+.nucleus {
+    width: 60px;
+    height: 60px;
+    background-color: #333;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 15px #666;
+}
+
+/* Camadas eletrônicas */
+.orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 1px dashed #888;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.camada-k {
+    width: 100px;
+    height: 100px;
+    animation: girar-k 3s linear infinite;
+}
+
+.camada-l {
+    width: 160px;
+    height: 160px;
+    animation: girar-l 5s linear infinite;
+}
+
+/* Estilo base dos elétrons */
+.electron {
+    width: 12px;
+    height: 12px;
+    background-color: #00f;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -6px 0 0 -6px;
+    box-shadow: 0 0 5px #00f;
+}
+
+/* Elétrons da Camada K */
+.camada-k .e1 { transform: rotate(0deg) translateX(50px); }
+.camada-k .e2 { transform: rotate(180deg) translateX(50px); }
+
+/* Elétrons da Camada L */
+.camada-l .e1 { transform: rotate(0deg) translateX(80px); }
+.camada-l .e2 { transform: rotate(90deg) translateX(80px); }
+.camada-l .e3 { transform: rotate(180deg) translateX(80px); }
+.camada-l .e4 { transform: rotate(270deg) translateX(80px); }
+
+
+/* Animações */
+@keyframes girar-k {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes girar-l {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(-360deg); }
+}
+
+/* Inputs de rádio e rótulos */
+input[type="radio"] {
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Botões */
+button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+button[type="submit"] {
+    background-color: #490fcf;
+    color: white;
+}
+
+button[type="submit"]:hover {
+    background-color: #117d8b;
+}
+
+button[type="button"] {
+    background-color: #d41305;
+    color: white;
+}
+
+button[type="button"]:hover {
+    background-color: #d32f2f;
+}
+
+/* Melhorando o formulário */
+form input[type="radio"] + label,
+form label {
+    margin-bottom: 5px;
+    display: inline-block;
+}
+.rodape {
+    text-align: center;
+    padding: 20px 10px;
+    background-color: #333;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.4s ease;
+    margin-top: 40px;
+    box-shadow: 0 -1px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Animação suave de entrada */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.rodape.aumentado {
+    font-size: 16px;
+    padding: 24px 10px;
+}
+

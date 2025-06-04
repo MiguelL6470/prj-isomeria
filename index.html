@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Analisador de Isomeria</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="atom">
+        <div class="nucleus">C</div>
+
+        <!-- Camada K: 2 elétrons -->
+        <div class="orbit camada-k">
+            <div class="electron e1"></div>
+            <div class="electron e2"></div>
+        </div>
+
+        <!-- Camada L: 4 elétrons -->
+        <div class="orbit camada-l">
+            <div class="electron e1"></div>
+            <div class="electron e2"></div>
+            <div class="electron e3"></div>
+            <div class="electron e4"></div>
+        </div>
+    </div>
+
+
+
+    <div class="container">
+        <h1>🔬 Analisador de Isomeria Molecular</h1>
+        <form id="formIsomeria">
+            <label>Possui dupla ligação entre carbonos?</label><br>
+            <input type="radio" name="dupla" value="s" required> Sim
+            <input type="radio" name="dupla" value="n"> Não<br><br>
+
+            <label>Os carbonos da dupla estão ligados a grupos diferentes?</label><br>
+            <input type="radio" name="grupos" value="s" required> Sim
+            <input type="radio" name="grupos" value="n"> Não<br><br>
+
+            <label>Possui carbono quiral?</label><br>
+            <input type="radio" name="quiral" value="s" required> Sim
+            <input type="radio" name="quiral" value="n"> Não<br><br>
+
+            <button type="submit">Analisar</button>
+            <button type="button" onclick="limparFormulario()">Limpar</button>
+        </form>
+
+        <div id="resultado"></div>
+    </div>
+    <footer class="rodape">
+    Projetado por Miguel Luiz
+</footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
